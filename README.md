@@ -8,7 +8,9 @@
 
 ## 这是什么
 
-Story Studio 是一个 **WorkBuddy Skill**，它将小说创作组织成一个 12 人影视剧组的协作流程。不是"AI 帮你写小说"，而是"AI 扮演一个完整的创作团队"。
+Story Studio 是一个 **多 Agent 开放世界创作框架**，它将小说创作组织成一个 12 人影视剧组的协作流程。不是"AI 帮你写小说"，而是"AI 扮演一个完整的创作团队"。
+
+> 本项目以 WorkBuddy Skill 格式开发和分发，但核心架构——12 个 Agent 角色 Prompt、Scene Spec 驱动管线、锚点约束系统、Codemap 自描述系统——不依赖任何特定平台。你可以把 Agent Prompt 移植到任何支持多 Agent 协作的 AI 框架。
 
 ### 剧组构成
 
@@ -37,7 +39,7 @@ Story Studio 是一个 **WorkBuddy Skill**，它将小说创作组织成一个 1
 
 ## 快速开始
 
-### 安装
+### 在 WorkBuddy 中使用（原生支持）
 
 将整个 `story-studio/` 文件夹放入 WorkBuddy 的 skills 目录：
 
@@ -45,7 +47,7 @@ Story Studio 是一个 **WorkBuddy Skill**，它将小说创作组织成一个 1
 ~/.workbuddy/skills/story-studio/
 ```
 
-### 启动
+然后在 WorkBuddy 对话中输入：
 
 ```
 "启动剧组"                   # 串行模拟模式（快速原型）
@@ -54,6 +56,15 @@ Story Studio 是一个 **WorkBuddy Skill**，它将小说创作组织成一个 1
 ```
 
 详细说明见 [QUICKSTART.md](QUICKSTART.md)。
+
+### 在其他平台使用
+
+SKILL.md 定义了完整的运行规则，12 个 Agent Prompt（`references/agent_prompts/`）各自独立。核心资产可以直接迁移：
+
+- **Agent Prompt** → 导入任何支持 system prompt 的 LLM 平台（ChatGPT、Claude、Gemini 等）
+- **Scene Spec YAML** → 平台无关的结构化场景规格，可搭配任意 Agent 框架
+- **Codemap 系统** → 纯 Markdown 自描述，不依赖特定运行时
+- **Python 脚本** → `scripts/workflow.py` 提供了可独立运行的参考实现
 
 ## 目录结构
 
@@ -150,7 +161,7 @@ Darwin 用 9 维 Rubric 对 Story Studio 进行了两轮共 6 次优化，将质
 - **网文作者** — 超长篇连载的上下文一致性管理
 - **创意写作者** — 需要一个"虚拟写作室"来 brainstorm 和推演剧情
 - **AI 研究者** — 多 Agent 协作 + 约束系统的参考实现
-- **WorkBuddy 用户** — 想看看一个复杂的 Skill 能长什么样
+- **Agent 框架开发者** — 12 个独立角色 Prompt + Scene Spec 管线可直接复用
 
 ## 许可
 

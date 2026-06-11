@@ -8,7 +8,9 @@
 
 ## What Is This
 
-Story Studio is a **WorkBuddy Skill** that organizes novel writing as a 12-person film crew's collaborative workflow. It's not "AI writes a novel for you" — it's "AI plays an entire creative team."
+Story Studio is a **multi-agent open-world creative framework** that organizes novel writing as a 12-person film crew's collaborative workflow. It's not "AI writes a novel for you" — it's "AI plays an entire creative team."
+
+> This project is developed and distributed in WorkBuddy Skill format, but the core architecture — 12 Agent role prompts, Scene Spec pipeline, anchor constraint system, Codemap — is platform-agnostic. You can port the agent prompts to any AI framework that supports multi-agent collaboration.
 
 ### The Crew
 
@@ -37,7 +39,7 @@ Story Studio is a **WorkBuddy Skill** that organizes novel writing as a 12-perso
 
 ## Quick Start
 
-### Installation
+### On WorkBuddy (native support)
 
 Copy the entire `story-studio/` folder into WorkBuddy's skills directory:
 
@@ -45,7 +47,7 @@ Copy the entire `story-studio/` folder into WorkBuddy's skills directory:
 ~/.workbuddy/skills/story-studio/
 ```
 
-### Launch
+Then in a WorkBuddy conversation:
 
 ```
 "Launch the crew"                    # Serial simulation mode (rapid prototyping)
@@ -54,6 +56,15 @@ Copy the entire `story-studio/` folder into WorkBuddy's skills directory:
 ```
 
 See [QUICKSTART.md](QUICKSTART.md) (Chinese) for detailed instructions.
+
+### On Other Platforms
+
+SKILL.md defines the complete runtime rules. The 12 Agent Prompts (`references/agent_prompts/`) are self-contained. Core assets can be ported directly:
+
+- **Agent Prompts** → Import into any LLM platform that supports system prompts (ChatGPT, Claude, Gemini, etc.)
+- **Scene Spec YAML** → Platform-agnostic structured scene specs, works with any agent framework
+- **Codemap System** → Pure Markdown self-description, no runtime dependency
+- **Python Scripts** → `scripts/workflow.py` provides a standalone reference implementation
 
 ## Directory Structure
 
@@ -128,7 +139,7 @@ After 2 passes (6 rounds) of Darwin Skill Optimizer:
 - **Web novel authors** — Context consistency management for ultra-long serials
 - **Creative writers** — A "virtual writers' room" for brainstorming and plot simulation
 - **AI researchers** — A reference implementation of multi-agent collaboration + constraint systems
-- **WorkBuddy users** — Curious about what a complex Skill looks like
+- **Agent framework developers** — 12 standalone role prompts + Scene Spec pipeline ready for reuse
 
 ## Acknowledgments
 

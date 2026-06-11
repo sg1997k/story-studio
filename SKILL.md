@@ -1,23 +1,24 @@
 ---
 name: story-studio
 description: |
-  多Agent小说创作剧组 v2.0 — 模仿影视剧组工作机制的AI小说创作系统。
+  多Agent开放世界创作框架 — 模仿影视剧组工作机制的小说创作系统。
   12 Agent剧组（统筹/因果律/世界模型/角色导演/人物创作者/现场监理/总导演/主角Agent/杂鱼Agent/审查官/摄影/剪辑/特效），
   支持开放世界模式、锚点约束系统、Scene Spec驱动、Team并行执行、超长篇连载（5卷+）。
   核心能力：创世会议、卷前筹备、场景生成与检查、章节生成、卷末复盘。
+  平台：以 WorkBuddy Skill 格式分发，核心 Agent Prompt 和架构可在任何支持多 Agent 协作的框架中复用。
   触发词（中文）：写小说、小说创作、启动剧组、创作、写作、编剧、故事、章节、角色、长篇连载、网文、开放世界模式
-  触发词（English）：novel writing, fiction, creative writing, story studio, character, scene, chapter, serial, web novel
+  触发词（English）：novel writing, fiction, creative writing, story studio, character, scene, chapter, serial, web novel, multi-agent, open world
 version: "2.1"
 updated: "2026-06-11"
 darwin_rounds: 2
 darwin_score_trajectory: "71.3 → 81.5 → 88.5"
 ---
 
-# Story Studio — 多Agent小说创作剧组 v2.0
+# Story Studio — 多 Agent 开放世界创作框架 v2.1
 
 ## Overview
 
-Story Studio 是一个模仿影视剧组工作机制的多Agent小说创作系统。
+Story Studio 是一个模仿影视剧组工作机制的多 Agent 开放世界创作框架。以 WorkBuddy Skill 格式开发，核心架构平台无关。
 
 **核心分界**：Skill = 引擎（不含任何故事内容）。Project = 世界实例（每个故事独立管理）。Agent启动时读取项目文件，所有示例用 `{占位符}`。
 
