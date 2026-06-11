@@ -121,6 +121,29 @@ story-studio/
 >
 > 这更接近真实创作——金庸不会先写好所有对话再让人物出场，他让人物在情境中自己说话。
 
+## 致谢
+
+本项目受到以下两个开源项目的深刻影响：
+
+### 🧬 [Nuwa · Skill 造人术](https://github.com/alchaincyf/nuwa-skill)
+
+女娲定义了"如何把一个人的思维方式蒸馏为一套可运行的认知操作系统"。Story Studio 的 **12 个 Agent 角色 Prompt**（总导演、因果律、世界模型、审查官等）全部遵循女娲的人物 Skill 框架构建——每个 Agent 都有独立的心智模型、决策启发式、表达 DNA、反模式和诚实边界。没有女娲，就没有这些"活"的创作 Agent。
+
+> "写不进去的那部分，才是你真正的护城河。" — 女娲
+
+### 🔬 [Darwin · Skill 优化器](https://github.com/alchaincyf/darwin-skill)
+
+Darwin 用 9 维 Rubric 对 Story Studio 进行了两轮共 6 次优化，将质量评分从 **71.3 提升到 88.5**（+24%）。主要贡献包括：
+- 结构化 YAML frontmatter（中英文触发词）
+- 5 个关键检查点（创世确认、卷蓝图确认、评审失败决策等）
+- 12 条分级反例黑名单（P0/P1/P2）
+- 7 种故障恢复场景 + 黄金法则
+- 完整的 Scene Spec YAML 示例
+
+> "If it's not graded, it's not improved." — Darwin
+
+---
+
 ## 适合谁
 
 - **网文作者** — 超长篇连载的上下文一致性管理
@@ -134,4 +157,4 @@ MIT License — 随便用，署名 appreciated 但不强制。
 
 ---
 
-*Made with ❤️ and a lot of Darwin optimization rounds.*
+*Made with ❤️, Nuwa's methodology, and a lot of Darwin optimization rounds.*
