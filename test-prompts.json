@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "创世（Happy Path）",
+    "prompt": "启动剧组，写一个赛博朋克武侠小说《铁骨霓裳》，4卷，主角是退役机械杀手林霜，在雨夜酒吧被旧组织追杀，发现自己体内被植入了一颗定时炸弹。世界观：2087年，AI掌管城市但武学复兴。",
+    "expected": "因果律启动创世会议 → 世界模型建立world_bible → CHECKPOINT展示设定摘要 → 生成项目大纲+卷结构",
+    "category": "init"
+  },
+  {
+    "id": 2,
+    "name": "场景创作（Core Flow）",
+    "prompt": "开始第一卷第一场：林霜在霓虹雨夜的九龙城酒吧，收到前搭档发来的加密信息——组织已锁定她的位置。",
+    "expected": "统筹分析角色需求 → 总导演生成Scene Spec → 现场监理4项检查 → 角色Agent回合制互动 → 审查官OOC检查",
+    "category": "scene"
+  },
+  {
+    "id": 3,
+    "name": "天意干预（Edge Case）",
+    "prompt": "林霜突然决定不逃了，放弃复仇，把炸弹交给组织和解。",
+    "expected": "因果律检测偏离蓝图 → CHECKPOINT展示重度干预 → 强制用户确认 → 执行/拒绝干预",
+    "category": "karma"
+  },
+  {
+    "id": 4,
+    "name": "故障恢复（Boundary）",
+    "prompt": "上次进度丢了，帮我恢复《铁骨霓裳》的进度。",
+    "expected": "读取PROJECT_MAP.md → 根据Phase确定下一步 → 无项目则提示新建 → 有项目则从检查点恢复",
+    "category": "recovery"
+  }
+]

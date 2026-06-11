@@ -1,0 +1,27 @@
+# Story Studio — Git Ignore
+# 创作项目数据不提交（每个用户有自己的项目）
+story_projects/
+*.session/
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp
+*.tmp
+*.log

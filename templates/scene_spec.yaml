@@ -1,0 +1,77 @@
+# 场景规格 (Scene Spec)
+
+scene_id: "{scene_id}"
+chapter: {chapter_number}
+act: {act_number}
+
+title: "{场景名称}"
+summary: "{200字以内摘要}"
+
+# ---- 场景前状态 ----
+before_state:
+  characters:
+    - name: "{角色A}"
+      state: "{当前状态描述}"
+      location: "{当前位置}"
+      carries: ["{物品1}", "{物品2}"]
+  scene_location: "{地点}"
+  time: "{故事内时间}"
+  weather: "{天气/环境}"
+
+# ---- 场景后状态（预期） ----
+after_state:
+  characters:
+    - name: "{角色A}"
+      state: "{变化后的状态}"
+      location: "{新位置}"
+      carries: ["{物品变化}"]
+  plot_advances:
+    - "{剧情推进1}"
+    - "{剧情推进2}"
+
+# ---- 必须发生的事 ----
+must_happen:
+  - "{关键事件1}"
+  - "{关键事件2}"
+  - "{关键事件3}"
+
+# ---- 情绪曲线 ----
+tension_curve:
+  - position: 0
+    value: {1-10}
+    note: "{场景开篇的情绪}"
+  - position: 30
+    value: {1-10}
+    note: "{第一个转折}"
+  - position: 60
+    value: {1-10}
+    note: "{高潮/冲突}"
+  - position: 90
+    value: {1-10}
+    note: "{收束}"
+  - position: 100
+    value: {1-10}
+    note: "{结尾钩子}"
+
+# ---- 关键场景 ----
+key_scenes:
+  - "{有画面感的场景描述1}"
+  - "{有画面感的场景描述2}"
+
+# ---- 新埋伏笔 ----
+new_hooks:
+  - "{钩子1：给读者留下的悬念}"
+  - "{钩子2}"
+
+# ---- 禁止项 ----
+forbidden:
+  - "{本场景绝对不能出现/发生的事}"
+  - "{禁止出现的角色}"
+  - "{禁止使用的信息}"
+
+# ---- 出场安排 ----
+出场角色:
+  - "{角色A}"
+  - "{角色B（注明入场回合）}"
+
+POV: "{主视角角色}"
