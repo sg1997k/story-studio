@@ -1,9 +1,10 @@
 # Story Studio v2.1
 
-> 多 Agent 小说创作剧组 — 模仿影视剧组工作机制的 AI 小说创作系统
+> 开放世界 AI 剧本创作 — 12 Agent 影视剧组，角色自主决策 + 结构化约束
 
 [![Version](https://img.shields.io/badge/version-2.1-blue)](SKILL.md)
 [![Darwin Score](https://img.shields.io/badge/darwin_score-88.5%2F100-brightgreen)](SKILL.md)
+[![GitHub](https://img.shields.io/badge/github-sg1997k%2Fstory--studio-black)](https://github.com/sg1997k/story-studio)
 
 ## 这是什么
 
